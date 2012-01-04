@@ -1,0 +1,7 @@
+Usage: ./re_ip.pl <IP|hostname>
+
+re_ip.pl is reverse DNS lookup tool by www.stephack.com/re_ip/<host>
+it easy way to view websites hosted on a given IP address or hostnames
+
+Copyright (c) 2011 by windows98SE
+Blog: http://www.stephack.com
