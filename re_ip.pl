@@ -4,8 +4,8 @@ use LWP::UserAgent;
 
 # global var/definitions
 my $TIMEOUT = 15;
-my $VERSION = '1.0';
-my $UPDATE = '05/01/2012';
+my $VERSION = '1.1';
+my $UPDATE = '05/07/2012';
 
 if(!checkHostByName($ARGV[0])){
   &usage;
@@ -13,18 +13,18 @@ if(!checkHostByName($ARGV[0])){
 }
 
 my $browser = LWP::UserAgent->new(
-  agent => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)',
+  agent => 'reverse ip tools v.'.$VERSION,
   timeout => $TIMEOUT
 );
-my $resp = $browser->get('http://www.stephack.com/re_ip/'.$ARGV[0]);
+my $resp = $browser->get('http://reip.stephack.com/'.$ARGV[0]);
 
 if($resp->status_line =~ /200/){
   my $content = $resp->content;
-  while ($content =~ /\- (.+?)<br \/>/ig){
+  while ($content =~ /'>(.+?)<\/a><br \/>/ig){
 	print "$1\n";
   }
 }else{
-  die ("[!] can't connect to http://www.stephack.com/re_ip/ ".$resp->status_line."\n");
+  die ("[!] can't connect to http://reip.stephack.com/ ".$resp->status_line."\n");
 }
 
 sub checkHostByName {
