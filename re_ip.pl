@@ -53,7 +53,7 @@ sub usage {
 ▓▓▓▓▓▓█████░░░░░░░░░██░░░░░░ See http://www.gnu.org/licenses/gpl.html
 █████▀░░░░▀▀████████░░░░░░░░ for the full license.
 =================================================================
-$0 is reverse DNS lookup tool by www.stephack.com/re_ip/<IP|hostname>
+$0 is reverse DNS lookup tool by http://reip.stephack.com/<IP|hostname>
 it easy way to view websites hosted on a given IP address or hostnames
 
 version: $VERSION
